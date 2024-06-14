@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Login/Sign Up</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <!-- Signup form with eye icon -->
+            <form action="WebProject.php" method="post">
+                <h1>Login</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email password</span>
+                <input class="con1" type="text" placeholder="Email" id="mail-sign-up-login"><div id="mail-error-login" class="error-message"></div> -->
+                <!-- Password input field with eye icon -->
+                 <div class="password-container">
+                    <input class="con1" type="password" placeholder="Password" id="password-sign-up-login">
+                    <button id="toggle-password-login"  type="button">
+                        <img src="visible.png"  alt="" style="position: absolute; bottom: 9px; right:0;" id="eye-icon-login">
+                    </button>
+                </div>
+                <div id="password-error-login" class="error-message"></div>
+                <div id="error-login" class="error-message"></div>
+                <a href="#">Forgot Password?</a>
+                <button type="submit">LOGIN</button>
+            </form>
+        </div>
+        <!-- <div class="form-container sign-in"> -->
+            <!-- Login form with eye icon -->
+            <!-- <form>
+                <h1>Login</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email password</span>
+                <input class="con1" type="text" placeholder="Email" id="mail-sign-up-login"><div id="mail-error-login" class="error-message"></div> -->
+                <!-- Password input field with eye icon -->
+                <!-- <div class="password-container">
+                    <input class="con1" type="password" placeholder="Password" id="password-sign-up-login">
+                    <button id="toggle-password-login"  type="button">
+                        <img src="visible.png"  alt="" style="position: absolute; bottom: 9px; right:0;" id="eye-icon-login">
+                    </button>
+                </div>
+                <div id="password-error-login" class="error-message"></div>
+                <div id="error-login" class="error-message"></div>
+                <a href="#">Forgot Password?</a>
+                <a href="../final.html"><button onclick="validateFormLogin()">LOGIN</button></a>
+            </form>
+        </div> -->
+        <!-- <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all the site features</p>
+                    <button class="hidden" id="login">Login</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, New User!</h1>
+                    <p>Register with your personal details to use all the site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- <script src="login-script.js"></script> -->
+</body>
+</html>

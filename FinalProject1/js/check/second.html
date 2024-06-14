@@ -1,0 +1,33 @@
+<!-- page2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+</head>
+<body>
+    <h1>Page 2</h1>
+    <hr>
+    <h2>Shared Variable on Page 2</h2>
+    <p>Shared Variable: <span id="sharedValuePage2"></span></p>
+
+    <script>
+        // Function to update the value on Page 2
+        function updatePage2() {
+            var sharedVariable = localStorage.getItem("sharedVariable");
+            document.getElementById("sharedValuePage2").innerText = sharedVariable;
+        }
+
+        // Initial update on page load
+        updatePage2();
+
+        // Optionally, you can listen for changes to the local storage variable and update dynamically
+        window.addEventListener('storage', function(event) {
+            if (event.key === 'sharedVariable') {
+                updatePage2();
+            }
+        });
+    </script>
+</body>
+</html>

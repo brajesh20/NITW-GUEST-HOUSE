@@ -1,0 +1,36 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Variable Example</title>
+</head>
+<body>
+    <h1>Shared Variable Example</h1>
+    <input type="text" id="sharedInput" placeholder="Enter value">
+    <button onclick="updateSharedVariable()">Update Variable</button>
+    <hr>
+    <h2>Page 1</h2>
+    <p>Shared Variable: <span id="sharedValuePage1"></span></p>
+
+    <script>
+        // Function to update the shared variable in local storage
+        function updateSharedVariable() {
+            var sharedInputValue = document.getElementById("sharedInput").value;
+            localStorage.setItem("sharedVariable", sharedInputValue);
+            updatePage1(); // Update the value on this page
+            // You can also notify other pages about the update using web sockets or other methods
+        }
+
+        // Function to update the value on Page 1
+        function updatePage1() {
+            var sharedVariable = localStorage.getItem("sharedVariable");
+            document.getElementById("sharedValuePage1").innerText = sharedVariable;
+        }
+
+        // Initial update on page load
+        updatePage1();
+    </script>
+</body>
+</html>
